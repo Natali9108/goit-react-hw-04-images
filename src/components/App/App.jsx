@@ -40,7 +40,7 @@ export const App = () => {
         setTotal(total);
         setShowBtn(page < Math.ceil(total / ApiServise.PER_PAGE));
       })
-      .catch(error => setError(error.message))
+      .catch(error => setError(error))
       .finally(() => setIsLoading(false));
   }, [searchQuery, page]);
 
